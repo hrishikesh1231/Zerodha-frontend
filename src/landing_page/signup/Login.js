@@ -16,10 +16,10 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
    
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, formData,{ withCredentials: true}).then(()=>{
+      const res = axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, formData,{ withCredentials: true}).then(()=>{
       toast.success('Login successful ✅');
       setTimeout(() => {
-        window.location.href = "www.google.com"; // ✅ Redirect to dashboard
+        window.location.href = 'https://zerodha-dashboard-brown.vercel.app'; // ✅ Redirect to dashboard
       }, 2000);
       }).catch((err)=>{
         toast.error(err.response?.data?.msg || 'Invalid username or password ❌');

@@ -21,7 +21,7 @@ const Signup = () => {
         [e.target.name]: e.target.value,
         });
     };
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -33,7 +33,7 @@ const Signup = () => {
         },{ withCredentials: true}).then(()=>{
             toast.success('Signup successful! 🎉');
             setTimeout(() => {
-              window.location.href = "www.google.com"; // ✅ Redirect to dashboard
+              window.location.href = 'https://zerodha-dashboard-brown.vercel.app'; // ✅ Redirect to dashboard
             }, 2000);
             // axios.get("http://localhost:3002/holdings");
             // setTimeout(() => {
