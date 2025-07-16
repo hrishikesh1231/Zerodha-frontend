@@ -15,8 +15,8 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-   
-      const res = axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, formData,{ withCredentials: true}).then(()=>{
+    console.log(`${process.env.REACT_APP_BACKEND_URL}`);
+      const res =await axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, formData,{ withCredentials: true}).then(()=>{
       toast.success('Login successful ✅');
       setTimeout(() => {
         window.location.href = 'https://zerodha-dashboard-brown.vercel.app'; // ✅ Redirect to dashboard
