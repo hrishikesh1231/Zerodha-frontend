@@ -25,7 +25,7 @@ const Signup = () => {
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:3002/signUp',{
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/signUp`,{
             name:formData.name,
             email:formData.email,
             password:formData.password,
