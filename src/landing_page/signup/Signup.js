@@ -33,7 +33,7 @@ const Signup = () => {
         },{ withCredentials: true}).then(()=>{
             toast.success('Signup successful! 🎉');
             setTimeout(() => {
-              window.location.href = "http://localhost:3000"; // ✅ Redirect to dashboard
+              window.location.href = process.env.REACT_APP_BACKEND_URL; // ✅ Redirect to dashboard
             }, 2000);
             // axios.get("http://localhost:3002/holdings");
             // setTimeout(() => {

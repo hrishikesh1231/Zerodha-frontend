@@ -19,7 +19,7 @@ const Login = () => {
       const res = await axios.post('http://localhost:3002/login', formData,{ withCredentials: true}).then(()=>{
       toast.success('Login successful ✅');
       setTimeout(() => {
-        window.location.href = "http://localhost:3000"; // ✅ Redirect to dashboard
+        window.location.href = process.env.REACT_APP_BACKEND_URL; // ✅ Redirect to dashboard
       }, 2000);
       }).catch((err)=>{
         toast.error(err.response?.data?.msg || 'Invalid username or password ❌');
